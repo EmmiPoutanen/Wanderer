@@ -2,23 +2,24 @@
 
 {% block content %}
 <div>
-  <h3>Sign Up</h3>
   <div>
     <form method="POST" action="/signup">
       <div>
         <div>
-          <input type="email" name="email" placeholder="Email" autofocus="">
+          <input type="email" name="email" placeholder="Sähköposti" autofocus="">
         </div>
       </div>
       <div>
         <div>
-          <input type="password" name="password" placeholder="Password">
+          <input type="password" name="password" placeholder="Salasana">
         </div>
       </div>
-      <a href="{{ url_for('authentication.login') }}">
-        Login
-      </a>
-      <button>Sign Up</button>
+      <div>
+        <div>
+          <input type="password-again" name="password-again" placeholder="Salasana uudelleen">
+        </div>
+      </div>
+      <button class="signup-button">Luo tili</button>
     </form>
   </div>
 </div>

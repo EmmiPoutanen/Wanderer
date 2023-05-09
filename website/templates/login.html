@@ -1,30 +1,24 @@
 {% extends "base_auth.html" %}
 
 {% block content %}
-<div>
-  <h3>Login</h3>
   <div>
     <form method="POST" action="/login">
       <div>
         <div>
-          <input type="email" name="email" placeholder="Your Email" autofocus="">
+          <input type="email" name="email" placeholder="Sähköposti" autofocus="">
         </div>
       </div>
       <div class="field">
         <div class="control">
-          <input type="password" name="password" placeholder="Your Password">
+          <input type="password" name="password" placeholder="Salasana">
         </div>
       </div>
-      <div class="field">
-        <label class="checkbox">
-          <input type="checkbox" name="remember">
-            Remember me
-        </label>
-      </div>
+      <button class="loginbutton">Kirjaudu</button>
+      <div class="forgot-link">
       <a href="{{ url_for('authentication.signup') }}">
-        Sign Up
+        Unohditko salasanan
       </a>
-      <button class="button is-block is-info is-large is-fullwidth">Login</button>
+      </div>
     </form>
   </div>
 </div>
