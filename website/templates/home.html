@@ -1,4 +1,23 @@
 {% extends "base_main.html" %}
 
-{% block content %}
+{% block event %}
+<div>
+  {% for event in events %}
+  <div style="display: flex; flex-direction: row;">
+    <p>
+      {{ event.name }}
+    </p>
+    <p>&emsp;</p>
+    <p>
+      {{ event.description }}
+    </p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block side %}
+    <a href="{{ url_for('main.create_event') }}">
+      <button class="createbutton" type="button">Luo tapahtuma</button>
+    </a>
 {% endblock %}

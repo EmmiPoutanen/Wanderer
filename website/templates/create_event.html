@@ -1,0 +1,37 @@
+{% extends "base_main.html" %}
+
+{% block event %}
+<div>
+  {% for event in events %}
+  <div style="display: flex; flex-direction: row;">
+    <p>
+      {{ event.name }}
+    </p>
+    <p>&emsp;</p>
+    <p>
+      {{ event.description }}
+    </p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block side %}
+<div>
+  <form method="POST" action="create_event">
+    <h4>Tapahtuman nimi</h4>
+    <input name="name"/>
+    <h4>Tapahtuman kuvaus</h4>
+    <input name="description"/>
+    <h4>Kategoria</h4>
+    <input name="category"/>
+    <h4>Aika</h4>
+    <input type="datetime-local" id="event-time" name="date" value="2023-05-10T00:00" min="2023-05-08T00:00" max="2023-09-14T00:00">
+    <h4>Osallistujamäärä</h4>
+    <input type="number" name="max_participants"/>
+    <h4>Paikka</h4>
+    <input name="location"/>
+    <button class="createbutton">Luo tapahtuma</button>
+  </form>
+</div>
+{% endblock %}

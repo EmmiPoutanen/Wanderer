@@ -12,7 +12,14 @@
       </div>
       <a class="profilebutton" role="button" href="{{ url_for('authentication.logout') }}" ></a>
     </div>
-    {% block content %}
-    {% endblock %}
+    <div class="grid-container">
+      <div class="eventsarea">
+        {% block event %}
+        {% endblock %}
+      </div>
+      <div class="sidearea">
+        {% block side %}
+        {% endblock %}
+      </div>
   </body>
 </html>

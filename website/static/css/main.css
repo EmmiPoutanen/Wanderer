@@ -1,8 +1,9 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #d8d8d8;
+  background-color: #ECECEC;
+  height: 100%;
 }
 
 .topnav {
@@ -32,4 +33,36 @@ body {
   height: 40px;
   width: 40px;
   background-color: #f6c7ff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100%;
+}
+
+.eventsarea {
+  justify-content: center;
+  display: flex;
+  padding: 15px;
+}
+
+.sidearea {
+  background-color: #A9A7FD24;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.createbutton {
+  border-radius: 20px;
+  border: 1px solid #000000;
+  background-color: #000000;
+  padding: 12px 15px;
+  color:#FFFFFF;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
 }
