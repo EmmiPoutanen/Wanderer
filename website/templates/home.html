@@ -1,19 +1,22 @@
 {% extends "base_main.html" %}
 
 {% block event %}
-<div>
-  {% for event in events %}
-  <div style="display: flex; flex-direction: row;">
-    <p>
-      {{ event.name }}
-    </p>
-    <p>&emsp;</p>
-    <p>
-      {{ event.description }}
-    </p>
-  </div>
-  {% endfor %}
+<div style="flex-direction: row;">
+  <button class="newbutton" type="button">Uudet</button>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+  <button class="trendingbutton" type="button">Trendaavat</button>
 </div>
+{% for event in events %}
+<div class="event">
+  <p>
+    {{ event.name }}
+  </p>
+  <p>&emsp;</p>
+  <p>
+    {{ event.description }}
+  </p>
+</div>
+{% endfor %}
 {% endblock %}
 
 {% block side %}
