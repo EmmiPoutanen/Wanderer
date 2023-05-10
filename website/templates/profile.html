@@ -1,0 +1,17 @@
+{% extends "base_main.html" %}
+
+{% block event %}
+<h1>Tapahtumahistoria</h1>
+{% endblock %}
+
+{% block side %}
+  <a href="{{ url_for('main.home') }}">
+    <i class="fa fa-arrow-left backarrow" style="color: #8B8989;"></i>
+  </a>
+  <h2>Minä</h2>
+  <div>
+  <a href="{{ url_for('authentication.logout') }}" >
+    <button class="createbutton">Kirjaudu ulos</button>
+  </a>
+</div>
+{% endblock %}

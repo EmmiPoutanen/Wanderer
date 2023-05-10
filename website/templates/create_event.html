@@ -1,62 +1,69 @@
 {% extends "base_main.html" %}
 
 {% block event %}
-<div>
-  {% for event in events %}
-  <div style="display: flex; flex-direction: row;">
-    <p>
-      {{ event.name }}
-    </p>
-    <p>&emsp;</p>
-    <p>
-      {{ event.description }}
-    </p>
-  </div>
-  {% endfor %}
+<div style="flex-direction: row;">
+  <button class="newbutton" type="button">Uudet</button>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+  <button class="trendingbutton" type="button">Trendaavat</button>
 </div>
+{% for event in events %}
+<a href="{{ url_for('main.event') }}">
+  <button class="event">
+    <h4>
+      {{ event.name }}
+    </h4>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <h4>
+      0/{{ event.max_participants }}
+    </h4>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  </button>
+</a>
+{% endfor %}
 {% endblock %}
 
 {% block side %}
-<div>
-  <form method="POST" action="create_event">
-    <div class="eventname"
-      <h4>Tapahtuman nimi</h4>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-      <input class="nameinput" name="name" placeholder="Tapahtuman nimi"/>
-    </div>
-    <div class="eventdescription"
-      <h4>Kuvaus</h4>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-      <input name="description" placeholder="Lyhyt kuvaus tapahtumasta..."/>
-    </div>
-    <div class="category"
-      <h4>Kategoria</h4>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-    </div>
-    <div class="select-category" style="width:0px;">
-      <select>
-        <option value="0">Valitse kategoria</option>
-        <option value="1">Urheilu</option>
-        <option value="2">Ravintola</option>
-        <option value="3">Pirskeet</option>
-      </select>
-    </div>
-    <div class="time"
-      <h4>Aika</h4>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-      <input type="datetime-local" id="event-time" name="date" value="2023-05-10T00:00" min="2023-05-08T00:00" max="2023-09-14T00:00">
-    </div>
-    <div class="turnout"
-      <h4>Osallistujamäärä</h4>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-      <input type="number" name="max_participants" placeholder="1"/>
-    </div>
-    <div class="eventlocation"
-      <h4>Paikka</h4>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-      <input name="location" placeholder="Paikkakunta"/>
-    </div>
-    <button class="createbutton">Luo tapahtuma</button>
-  </form>
-</div>
+<a href="{{ url_for('main.home') }}">
+  <i class="fa fa-arrow-left backarrow" style="color: #8B8989;"></i>
+</a>
+<form class="eventform" method="POST" action="create_event">
+  <div class="eventname"
+    <h4>Tapahtuman nimi</h4>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <input class="nameinput" name="name" placeholder="Tapahtuman nimi"/>
+  </div>
+  <div class="eventdescription"
+    <h4>Kuvaus</h4>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <input name="description" placeholder="Lyhyt kuvaus tapahtumasta..."/>
+  </div>
+  <div class="category"
+    <h4>Kategoria</h4>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  </div>
+  <div class="select-category" style="width:0px;">
+    <select>
+      <option value="0">Valitse kategoria</option>
+      <option value="1">Urheilu</option>
+      <option value="2">Ravintola</option>
+      <option value="3">Pirskeet</option>
+    </select>
+  </div>
+  <div class="time"
+    <h4>Aika</h4>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <input type="datetime-local" id="event-time" name="date" value="2023-05-10T00:00" min="2023-05-08T00:00" max="2023-09-14T00:00">
+  </div>
+  <div class="turnout"
+    <h4>Osallistujamäärä</h4>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <input type="number" name="max_participants" placeholder="1"/>
+  </div>
+  <div class="eventlocation"
+    <h4>Paikka</h4>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <input name="location" placeholder="Paikkakunta"/>
+  </div>
+  <button class="createbutton">Luo tapahtuma</button>
+</form>
 {% endblock %}

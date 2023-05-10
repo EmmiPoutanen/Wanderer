@@ -42,17 +42,18 @@ input[type="text"] {
   border-radius: 20px;
   border: 1px solid #FFFFFF;
   height: 25px;
-  margin-left: 130px;
   padding: 5px 20px;
   width: 80%;
 }
 
 .input-icon {
   position: relative;
+  margin-left: 10px;
+  width: 350px
 }
 .input-icon i {
   position:absolute;
-  right: 0;
+  right: 40px;
   top: 8px;
 }
 
@@ -84,22 +85,35 @@ input[type="text"] {
 .event {
   display: flex;
   flex-direction: row;
-  border: 10px solid #2c365e;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border: 1px solid #2c365e;
   border-radius: 10px;
   margin-bottom: 15px;
   margin-top: 15px;
   background-color: #2c365e;
-  width: 95%;
+  width: 100%;
   box-shadow: 0 0 10px 0 #424242e7;
+}
+
+.event{
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.eventform {
+  width: 100%
 }
 
 .eventname{
   font-family: 'Inter', sans-serif;
 }
 .eventname input{
-  border: 10px solid #FFFFFF;
+  padding: 12px;
+  border:#FFFFFF;
   border-radius: 10px;
-  width: 90%;
+  width: 95%;
   color: #8B8989;
   font-family: 'Inter', sans-serif;
   margin-bottom: 9%;
@@ -111,11 +125,12 @@ input[type="text"] {
 }
 
 .eventdescription input {
-  border: 10px solid #FFFFFF;
+  padding: 12px;
+  border:#FFFFFF;
   border-radius: 10px;
   margin-bottom: 9%;
   margin-top: 3%;
-  width: 90%;
+  width: 95%;
   color: #8B8989;
   font-family: 'Inter', sans-serif;
   padding-bottom: 50px;
@@ -127,10 +142,11 @@ input[type="text"] {
 }
 
 .turnout input {
-  border: 10px solid #FFFFFF;
+  padding: 12px;
+  border:#FFFFFF;
   border-radius: 10px;
   margin: 8px 0;
-  width: 90%;
+  width: 95%;
   color: #8B8989;
   font-family: 'Inter', sans-serif;
 }
@@ -140,11 +156,12 @@ input[type="text"] {
 }
 
 .eventlocation input {
-  border: 10px solid #FFFFFF;
+  padding: 12px;
+  border:#FFFFFF;
   border-radius: 10px;
   margin-bottom: 9%;
   margin-top: 3%;
-  width: 90%;
+  width: 95%;
   color: #8B8989;
   font-family: 'Inter', sans-serif;
 }
@@ -159,17 +176,17 @@ input[type="text"] {
   margin-top: 3%;
 }
 
-
 .time {
   font-family: 'Inherit', sans-serif;
 }
 
 .time input {
-  border: 10px solid #FFFFFF;
+  padding: 12px;
+  border:#FFFFFF;
   border-radius: 10px;
   margin-bottom: 9%;
   margin-top: 3%;
-  width: 90%;
+  width: 95%;
   color: #8B8989;
   font-family: 'Inter', sans-serif;
 }
@@ -177,8 +194,6 @@ input[type="text"] {
 
 .sidearea {
   background-color: #DDDCF1;
-  display: flex;
-  justify-content: center;
   padding: 15px;
 }
 
@@ -229,4 +244,8 @@ input[type="text"] {
 .trendingbutton:hover {
   background-color: #2f3699;
   transition: 0.7s;
+}
+.backarrow {
+  font-size: 30px;
+  margin-bottom: 20px;
 }

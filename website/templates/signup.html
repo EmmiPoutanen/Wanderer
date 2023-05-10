@@ -1,5 +1,11 @@
 {% extends "base_auth.html" %}
 
+{%block corner%}
+<a href="{{ url_for('authentication.login') }}">
+  <button class="registerbutton">Kirjaudu</button>
+</a>
+{% endblock %}
+
 {% block content %}
 <div>
   <div>
@@ -16,9 +22,18 @@
       </div>
       <div>
         <div>
-          <input type="password-again" name="password-again" placeholder="Salasana uudelleen">
+          <input type="password" name="password-again" placeholder="Salasana uudelleen">
         </div>
       </div>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div style="color:red; margin-top:122px">
+          {{ messages[0] }}
+        </div>
+        {% else %}
+        <div style="height: 140px"></div>
+        {% endif %}
+      {% endwith %}
       <button class="signup-button">Luo tili</button>
     </form>
   </div>

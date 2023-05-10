@@ -10,17 +10,17 @@
       <div class="topnavleft">
         <h1>Wanderer</h1>
         <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-        <div class="logo">
-          <img src="/static/Pictures/Logo2.png"alt="logo">
+        <img src="/static/Pictures/Logo2.png"alt="logo">
+        <div class="input-icon">
+          <input type="text" placeholder="Hae kategorioita">
+          <i class="fa fa-search" style="color: #8b8989;"></i>
         </div>
-          <div class="input-icon">
-            <input type="text" placeholder="Hae kategorioita">
-            <i class="fa fa-search" style="color: #8b8989;"></i>
-          </div>
       </div>
-      <button class="profilebutton">
-        <img src="/static/Pictures/profiilikuva.png" alt="profiili">
-      </button>
+      <a href="{{ url_for('main.profile') }}">
+        <button class="profilebutton">
+          <img src="/static/Pictures/profiilikuva.png" alt="profiili">
+        </button>
+      </a>
     </div>
     <div class="grid-container">
       <div class="eventsarea">

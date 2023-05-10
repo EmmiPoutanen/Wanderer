@@ -28,7 +28,8 @@
 {% endblock %}
 
 {% block side %}
-    <a href="{{ url_for('main.create_event') }}">
-      <button class="createbutton" type="button">Luo tapahtuma</button>
-    </a>
+<a href="{{ url_for('main.home') }}">
+  <i class="fa fa-arrow-left backarrow" style="color: #8B8989;"></i>
+</a>
+<p>{{event.name}}</p>
 {% endblock %}

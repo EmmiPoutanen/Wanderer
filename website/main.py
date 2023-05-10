@@ -46,3 +46,19 @@ def create_event_post():
     db.session.commit()
 
     return redirect(url_for("main.home"))
+
+
+@main.route('/profile')
+@login_required
+def profile():
+    events = Event.query.all()
+    return render_template("profile.html", events=events)
+
+@main.route('/event/')
+@main.route('/event/<eventid>')
+@login_required
+def event(eventid=1):
+    print("Hello")
+    events = Event.query.all()
+    event = Event.query.filter_by(id=eventid).first()
+    return render_template("event.html", events=events, event=event)

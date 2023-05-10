@@ -1,25 +1,36 @@
 {% extends "base_auth.html" %}
+{%block corner%}
+<a href="{{ url_for('authentication.signup') }}">
+  <button class="registerbutton">Luo tili</button>
+</a>
+{% endblock %}
 
 {% block content %}
+<form method="POST" action="/login">
   <div>
-    <form method="POST" action="/login">
-      <div>
-        <div>
-          <input type="email" name="email" placeholder="Sähköposti" autofocus="">
-        </div>
-      </div>
-      <div class="field">
-        <div class="control">
-          <input type="password" name="password" placeholder="Salasana">
-        </div>
-      </div>
-      <button class="loginbutton">Kirjaudu</button>
-      <div class="forgot-link">
-      <a href="{{ url_for('authentication.signup') }}">
-        Unohditko salasanan
-      </a>
-      </div>
-    </form>
+    <div>
+      <input type="email" name="email" placeholder="Sähköposti" autofocus="">
+    </div>
   </div>
-</div>
+  <div class="field">
+    <div class="control">
+      <input type="password" name="password" placeholder="Salasana">
+    </div>
+  </div>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div style="color:red; margin-top:133px">
+      {{ messages[0] }}
+    </div>
+    {% else %}
+    <div style="height: 150px"></div>
+    {% endif %}
+  {% endwith %}
+  <button class="loginbutton">Kirjaudu</button>
+  <div class="forgot-link">
+  <a href="{{ url_for('authentication.signup') }}">
+    Unohditko salasanan
+  </a>
+  </div>
+</form>
 {% endblock %}

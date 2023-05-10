@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, request, url_for
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import login_required, login_user, logout_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -26,6 +26,7 @@ def login_post():
     # Has the password and compare it to the password in database
     if not user or not check_password_hash(user.password, password):
         # If the user doesn"t exist or password is wrong, relaod page with error
+        flash("Virheellinen sähköpostiosoite tai salasana")
         return redirect(url_for("authentication.login"))
 
     # Login passed, redirect to home screen
@@ -48,6 +49,7 @@ def signup_post():
 
     if user:
         # If a user is found, redirect back to signup page with error text
+        flash("Tällä sähköpostiosoitteella on jo tili")
         return redirect(url_for("authentication.signup"))
 
     # Create a new user with the form data. Hash the password with sha256
@@ -57,8 +59,14 @@ def signup_post():
     # Add the new user to the database
     db.session.add(new_user)
     db.session.commit()
-    # Redirect to login screen
-    return redirect(url_for("authentication.login"))
+    # Redirect to confirmation screen
+    return redirect(url_for("authentication.account_created"))
+
+
+@authentication.route("/account_created")
+@login_required
+def account_created():
+    return render_template("account_created.html")
 
 
 @authentication.route("/logout")

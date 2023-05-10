@@ -12,6 +12,7 @@ body {
   justify-content: center;
   display: flex;
   flex-direction: row;
+  margin-bottom: -40px;
 }
 
  img {
@@ -50,6 +51,8 @@ body {
   float: right;
   margin-top: 20px;
   margin-right: 20px;
+  position: absolute;
+  right: 0;
 
 }
 
@@ -62,8 +65,8 @@ body {
   font-size: 14px;
   letter-spacing: 1px;
   transition: transform 80ms ease-in;
-  width: 80%;
-  margin-top: 170px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .signup-button {
@@ -75,8 +78,21 @@ body {
   font-size: 14px;
   letter-spacing: 1px;
   transition: transform 80ms ease-in;
-  width: 80%;
-  margin-top: 150px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.return-button {
+  border-radius: 20px;
+  border: 1px solid #000000;
+  background-color: #000000;
+  padding: 12px 15px;
+  color:#FFFFFF;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
+  width: 100%;
+  margin-top: 220px;
 }
 
 .forgot-link {
