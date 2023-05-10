@@ -8,7 +8,7 @@ html, body {
 
 .topnav {
   align-items: center;
-  background-color: #444;
+  background-color: #A9A7FD;
   display: flex;
   overflow: hidden;
   flex-direction: row;
@@ -21,18 +21,50 @@ html, body {
   align-items: center;
   display: flex;
   flex-direction: row;
+  font-family: 'Sriracha';
+  color: rgba(234, 233, 255);
+  font-size: 20px;
+  letter-spacing: .1em;
+  text-shadow:
+    -1px -1px 1px #9b9b9b,
+    2px 2px 1px #8b8b8b;
 }
 
-.textinput {
-  border-radius: 25px;
-  height: 25px;
-  margin-left: 100px;
+img {
+  width: 80px;
+  height: auto;
+
 }
+
+input[type="text"] {
+  border-radius: 20px;
+  border: 1px solid #FFFFFF;
+  height: 25px;
+  margin-left: 130px;
+  padding: 5px 20px;
+  width: 80%;
+}
+
+.input-icon {
+  position: relative;
+}
+.input-icon i {
+  position:absolute;
+  right: 0;
+  top: 8px;
+}
+
 
 .profilebutton {
-  height: 40px;
-  width: 40px;
-  background-color: #f6c7ff;
+  border: none;
+  cursor:  pointer;
+  background-color: inherit;
+
+}
+
+.profilebutton img {
+  height: auto;
+  width: 60px;
 }
 
 .grid-container {
@@ -49,6 +81,88 @@ html, body {
   padding: 15px;
 }
 
+.eventname{
+  font-family: 'Inter', sans-serif;
+}
+.eventname input{
+  border: 10px solid #FFFFFF;
+  border-radius: 10px;
+  width: 90%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 9%;
+  margin-top: 3%;
+}
+
+.eventdescription {
+  font-family: 'Inter', sans-serif;
+}
+
+.eventdescription input {
+  border: 10px solid #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 9%;
+  margin-top: 3%;
+  width: 90%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 50px;
+}
+
+
+.turnout {
+  font-family: 'Inter', sans-serif;
+}
+
+.turnout input {
+  border: 10px solid #FFFFFF;
+  border-radius: 10px;
+  margin: 8px 0;
+  width: 90%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+}
+
+.eventlocation {
+  font-family: 'Inter', sans-serif;
+}
+
+.eventlocation input {
+  border: 10px solid #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 9%;
+  margin-top: 3%;
+  width: 90%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+}
+
+.category {
+  font-family: 'Inter', sans-serif;
+}
+
+.select-category {
+  position: relative;
+  margin-bottom: 9%;
+  margin-top: 3%;
+}
+
+
+.time {
+  font-family: 'Inherit', sans-serif;
+}
+
+.time input {
+  border: 10px solid #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 9%;
+  margin-top: 3%;
+  width: 90%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+}
+
+
 .sidearea {
   background-color: #A9A7FD24;
   display: flex;
@@ -64,5 +178,6 @@ html, body {
   color:#FFFFFF;
   font-size: 14px;
   letter-spacing: 1px;
+  width: 100%;
   transition: transform 80ms ease-in;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Flask app</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
@@ -8,9 +9,18 @@
     <div class="topnav">
       <div class="topnavleft">
         <h1>Wanderer</h1>
-        <input class="textinput" type="text"/>
+        <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+        <div class="logo">
+          <img src="/static/Pictures/Logo1.png"alt="logo">
+        </div>
+          <div class="input-icon">
+            <input type="text" placeholder="Hae kategorioita">
+            <i class="fa fa-search" style="color: #8b8989;"></i>
+          </div>
       </div>
-      <a class="profilebutton" role="button" href="{{ url_for('authentication.logout') }}" ></a>
+      <button class="profilebutton">
+        <img src="/static/Pictures/profiilikuva.png" alt="profiili">
+      </button>
     </div>
     <div class="grid-container">
       <div class="eventsarea">
