@@ -9,9 +9,14 @@
     <i class="fa fa-arrow-left backarrow" style="color: #8B8989;"></i>
   </a>
   <h2>Minä</h2>
+  <button class="profilebuttons">Luodut tapahtumat</button>
+  <button class="profilebuttons">Ilmoittautumiset</button>
+  <button class="profilebuttons">Vaihda sähköpostiosoite</button>
+  <button class="profilebuttons">Vaihda salasana</button>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
   <div>
   <a href="{{ url_for('authentication.logout') }}" >
-    <button class="createbutton">Kirjaudu ulos</button>
+    <button class="logoutbutton">Kirjaudu ulos</button>
   </a>
 </div>
 {% endblock %}

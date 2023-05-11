@@ -11,11 +11,11 @@
     <h4>
       {{ event.name }}
     </h4>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
     <h4>
       0/{{ event.max_participants }}
     </h4>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 </button>
 
 {% endfor %}
@@ -31,5 +31,17 @@
 <a href="{{ url_for('main.home') }}">
   <i class="fa fa-arrow-left backarrow" style="color: #8B8989;"></i>
 </a>
-<p>{{event.name}}</p>
+<div class="event-title"
+  <h4>{{event.name}}</h4>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <h4>0/{{event.max_participants}}</h4>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+</div>
+<p>{{event.date}}</p>
+<p>{{event.location}}</p>
+<div class="event-descb"
+  <p>{{event.description}}</p>
+</div>
+<button class="joinbutton" type="button">Liity</button>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 {% endblock %}
