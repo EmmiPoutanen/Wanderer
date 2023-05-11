@@ -6,19 +6,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
   <button class="trendingbutton" type="button">Trendaavat</button>
 </div>
-{% for event in events %}
-<a href="{{ url_for('main.event') }}">
-  <button class="event">
+{% for createdevent in events %}
+<button type="button" class="event" onclick="(function() {window.location.assign('/event/'+'{{createdevent.id}}'); return false;})();return false;">
     <h4>
-      {{ event.name }}
+      {{ createdevent.name }}
     </h4>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-    <h4>
-      0/{{ event.max_participants }}
-    </h4>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-  </button>
-</a>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <div class="flex-row">
+      <i class="fa-solid fa-user-group" style="color: #6E72B4; margin-right: 10px;"></i>
+      <h4>
+        0/{{ createdevent.max_participants }}
+      </h4>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    </div>
+</button>
 {% endfor %}
 {% endblock %}
 
@@ -64,6 +65,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <input name="location" placeholder="Paikkakunta"/>
   </div>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div style="color:red; margin: 10px;">
+      {{ messages[0] }}
+    </div>
+    {% endif %}
+  {% endwith %}
   <button class="createbutton">Luo tapahtuma</button>
 </form>
 {% endblock %}

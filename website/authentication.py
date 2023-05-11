@@ -9,7 +9,7 @@ from website.static.db import db
 authentication = Blueprint("authentication", __name__)
 
 
-@authentication.route("/login")
+@authentication.route("/")
 def login():
     return render_template("login.html")
 
@@ -23,7 +23,7 @@ def login_post():
     user = User.query.filter_by(email=email).first()
 
     # Check if the user actually exists
-    # Has the password and compare it to the password in database
+    # Hash the password and compare it to the password in database
     if not user or not check_password_hash(user.password, password):
         # If the user doesn"t exist or password is wrong, relaod page with error
         flash("Virheellinen sähköpostiosoite tai salasana")
@@ -64,7 +64,6 @@ def signup_post():
 
 
 @authentication.route("/account_created")
-@login_required
 def account_created():
     return render_template("account_created.html")
 

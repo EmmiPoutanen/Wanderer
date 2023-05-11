@@ -6,29 +6,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
   <button class="trendingbutton" type="button">Trendaavat</button>
 </div>
-{% for event in events %}
-<button class="event" onClick="sendUrl(event.id)">
+{% for createdevent in events %}
+<button type="button" class="event" onclick="(function() {window.location.assign('/event/'+'{{createdevent.id}}'); return false;})();return false;">
+  <h4>
+    {{ createdevent.name }}
+  </h4>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <div class="flex-row">
+    <i class="fa-solid fa-user-group" style="color: #6E72B4; margin-right: 10px;"></i>
     <h4>
-      {{ event.name }}
+      0/{{ createdevent.max_participants }}
     </h4>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-    <h4>
-      0/{{ event.max_participants }}
-    </h4>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  </div>
 </button>
-
 {% endfor %}
-<script>
-  function sendUrl(eventid){
-    console.log(eventid)
-    window.location.assign("/event/"+"1");
-  }
-</script>
+
 {% endblock %}
 
 {% block side %}
-    <a href="{{ url_for('main.create_event') }}">
-      <button class="createbutton" type="button"><i class="fa-solid fa-plus"></i> Luo tapahtuma</button>
-    </a>
+  <a href="{{ url_for('main.create_event') }}">
+    <button class="createbutton" type="button"><i class="fa-solid fa-plus"></i> Luo tapahtuma</button>
+  </a>
 {% endblock %}

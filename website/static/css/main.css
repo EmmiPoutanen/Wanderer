@@ -6,6 +6,7 @@ html, body {
   height: 100%;
 }
 
+/* Base styles */
 .topnav {
   align-items: center;
   background-color: #2c365e;
@@ -31,13 +32,6 @@ html, body {
     2px 2px 1px #8b8b8b;
 }
 
-img {
-  width: 60px;
-  height: auto;
-  margin-left: 5px;
-
-}
-
 input[type="text"] {
   border-radius: 20px;
   border: 1px solid #FFFFFF;
@@ -51,12 +45,12 @@ input[type="text"] {
   margin-left: 10px;
   width: 350px
 }
+
 .input-icon i {
   position:absolute;
   right: 40px;
   top: 8px;
 }
-
 
 .profilebutton {
   border: none;
@@ -82,6 +76,12 @@ input[type="text"] {
   padding: 15px;
 }
 
+.sidearea {
+  background-color: #DDDCF1;
+  padding: 15px;
+}
+
+/* Events area styles */
 .event {
   display: flex;
   flex-direction: row;
@@ -101,101 +101,6 @@ input[type="text"] {
   font-size: 18px;
   color: #FFFFFF;
   letter-spacing: 1px;
-}
-
-.eventform {
-  width: 100%
-}
-
-.eventname{
-  font-family: 'Inter', sans-serif;
-}
-.eventname input{
-  padding: 12px;
-  border:#FFFFFF;
-  border-radius: 10px;
-  width: 95%;
-  color: #8B8989;
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 9%;
-  margin-top: 3%;
-}
-
-.eventdescription {
-  font-family: 'Inter', sans-serif;
-}
-
-.eventdescription input {
-  padding: 12px;
-  border:#FFFFFF;
-  border-radius: 10px;
-  margin-bottom: 9%;
-  margin-top: 3%;
-  width: 95%;
-  color: #8B8989;
-  font-family: 'Inter', sans-serif;
-  padding-bottom: 50px;
-}
-
-
-.turnout {
-  font-family: 'Inter', sans-serif;
-}
-
-.turnout input {
-  padding: 12px;
-  border:#FFFFFF;
-  border-radius: 10px;
-  margin: 8px 0;
-  width: 95%;
-  color: #8B8989;
-  font-family: 'Inter', sans-serif;
-}
-
-.eventlocation {
-  font-family: 'Inter', sans-serif;
-}
-
-.eventlocation input {
-  padding: 12px;
-  border:#FFFFFF;
-  border-radius: 10px;
-  margin-bottom: 9%;
-  margin-top: 3%;
-  width: 95%;
-  color: #8B8989;
-  font-family: 'Inter', sans-serif;
-}
-
-.category {
-  font-family: 'Inter', sans-serif;
-}
-
-.select-category {
-  position: relative;
-  margin-bottom: 9%;
-  margin-top: 3%;
-}
-
-.time {
-  font-family: 'Inherit', sans-serif;
-}
-
-.time input {
-  padding: 12px;
-  border:#FFFFFF;
-  border-radius: 10px;
-  margin-bottom: 9%;
-  margin-top: 3%;
-  width: 95%;
-  color: #8B8989;
-  font-family: 'Inter', sans-serif;
-}
-
-
-.sidearea {
-  background-color: #DDDCF1;
-  padding: 15px;
 }
 
 .createbutton {
@@ -246,10 +151,8 @@ input[type="text"] {
   background-color: #2f3699;
   transition: 0.7s;
 }
-.backarrow {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
+
+/* Event styles */
 
 .event-title {
   font-size: 25px;
@@ -257,6 +160,8 @@ input[type="text"] {
   font-weight: bold;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .joinbutton {
@@ -267,7 +172,7 @@ input[type="text"] {
   color:#FFFFFF;
   font-size: 15px;
   letter-spacing: 1px;
-  width: 95%;
+  width: 100%;
   transition: transform 80ms ease-in;
   font-family: 'Inter', sans-serif;
   margin-top: 100px;
@@ -278,12 +183,97 @@ input[type="text"] {
   font-size: 15px;
 }
 
-/*profile styling*/
-
-h2 {
-  font-family: 'Inter', sans-serif;
-  font-weight: bold;
+/* Event creation styles */
+.eventform {
+  width: 100%
 }
+
+.eventname{
+  font-family: 'Inter', sans-serif;
+}
+.eventname input{
+  padding: 12px;
+  border:#FFFFFF;
+  border-radius: 10px;
+  width: 95%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 9%;
+  margin-top: 3%;
+}
+
+.eventdescription {
+  font-family: 'Inter', sans-serif;
+}
+
+.eventdescription input {
+  padding: 12px;
+  border:#FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 9%;
+  margin-top: 3%;
+  width: 95%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 50px;
+}
+
+.turnout {
+  font-family: 'Inter', sans-serif;
+}
+
+.turnout input {
+  padding: 12px;
+  border:#FFFFFF;
+  border-radius: 10px;
+  margin: 8px 0;
+  margin-bottom: 9%;
+  width: 95%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+}
+
+.eventlocation {
+  font-family: 'Inter', sans-serif;
+}
+
+.eventlocation input {
+  padding: 12px;
+  border:#FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 9%;
+  margin-top: 3%;
+  width: 95%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+}
+
+.category {
+  font-family: 'Inter', sans-serif;
+}
+
+.select-category {
+  position: relative;
+  margin-bottom: 9%;
+  margin-top: 3%;
+}
+
+.time {
+  font-family: 'Inherit', sans-serif;
+}
+
+.time input {
+  padding: 12px;
+  border:#FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 9%;
+  margin-top: 3%;
+  width: 95%;
+  color: #8B8989;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Profile styles */
 .profilebuttons {
   border-radius: 20px;
   border: 1px solid #2f3699a8;
@@ -309,4 +299,27 @@ h2 {
   width: 100%;
   transition: transform 80ms ease-in;
   margin-top: 200px;
+}
+
+/* Common styles */
+img {
+  width: 60px;
+  height: auto;
+  margin-left: 5px;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+
+.flex-row {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.backarrow {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
